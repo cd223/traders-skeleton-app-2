@@ -1,0 +1,42 @@
+<h2>Trades</h2>
+  <ul>
+    <tr *ngFor='let trade of trades'>
+      <td>{{ trade.tradeId }}&nbsp;</td>
+      <td>{{ trade.symbol }}&nbsp;</td>
+      <td>{{ trade.quantity }}&nbsp;</td>
+      <td>{{ trade.price | customCurrency: trade.currency }}&nbsp;</td>
+      <td>{{ trade.selectedTrader.name }}&nbsp;</td>
+    </tr>
+  </ul>
+
+<h2>Add a Trade</h2>
+
+<form [formGroup]="eqTradeFg" (ngSubmit)="addTrade()">
+    
+    <label>Trade ID</label>
+    <input type="text" name="tradeId" formControlName="tradeId" readonly>
+
+    <label>Symbol</label>
+    <input type="text" name="symbol" formControlName="symbol">
+
+    <label>Quantity</label>
+    <input type="number" name="quantity" formControlName="quantity">
+
+    <label>Price</label>
+    <input type="number" name="price" formControlName="price">
+
+    <label>Currency</label>
+    <select formControlName="currency">
+        <option *ngFor="let currency of currencies" [ngValue]="currency">{{currency}}</option>
+    </select>
+
+    <label>Trader</label>
+    <select formControlName="selectedTrader">
+        <option *ngFor="let trader of traders" [ngValue]="trader">{{trader.name}}</option>
+    </select>
+
+    <button type="submit">Submit Trade</button>
+</form>
+<label *ngIf="errors" [ngStyle]="{color: 'red' }">Errors! Submit unsuccessful.</label>
+
+<app-about>Equity Trade Component</app-about>

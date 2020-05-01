@@ -1,0 +1,14 @@
+<h2>Add a Trader</h2>
+<form #form="ngForm" (ngSubmit)="addTrader()">
+    <label>ID</label>
+    <input type="text" name="id" [(ngModel)]="id" readonly/>
+    <label>Name</label>
+    <input type="text" name="name" [(ngModel)]="name" />
+    <label>Location</label>
+    <input type="text" name="location" [(ngModel)]="location" />
+    <label>Desk</label>
+    <input type="text" name="desk" [(ngModel)]="desk" />
+    <br />
+    <button type="submit">Add</button>
+</form>
+
