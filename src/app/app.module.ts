@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { FibonacciComponent } from './fibonacci/fibonacci.component';
 import { TimerIntervalComponent } from './timer-interval/timer-interval.component';
 import { PersonComponent } from './person/person.component';
+import { InputBoxDirective } from './input-box.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PersonComponent } from './person/person.component';
     AboutComponent,
     PersonComponent,
     FibonacciComponent,
-    TimerIntervalComponent
+    TimerIntervalComponent,
+    InputBoxDirective
   ],
   imports: [
     BrowserModule,

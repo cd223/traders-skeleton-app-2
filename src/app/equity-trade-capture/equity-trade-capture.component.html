@@ -17,21 +17,21 @@
     <input type="text" name="tradeId" formControlName="tradeId" readonly>
 
     <label>Symbol</label>
-    <input type="text" name="symbol" formControlName="symbol">
+    <input type="text" name="symbol" formControlName="symbol" bgColor="red">
 
     <label>Quantity</label>
-    <input type="number" name="quantity" formControlName="quantity">
+    <input type="number" name="quantity" formControlName="quantity" bgColor>
 
     <label>Price</label>
-    <input type="number" name="price" formControlName="price">
+    <input type="number" name="price" formControlName="price" bgColor>
 
     <label>Currency</label>
-    <select formControlName="currency">
+    <select formControlName="currency" bgColor>
         <option *ngFor="let currency of currencies" [ngValue]="currency">{{currency}}</option>
     </select>
 
     <label>Trader</label>
-    <select formControlName="selectedTrader">
+    <select formControlName="selectedTrader" bgColor>
         <option *ngFor="let trader of traders" [ngValue]="trader">{{trader.name}}</option>
     </select>
 
