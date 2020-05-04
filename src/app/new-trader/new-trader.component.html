@@ -7,7 +7,9 @@
     <label>Location</label>
     <input type="text" name="location" [(ngModel)]="location" />
     <label>Desk</label>
-    <input type="text" name="desk" [(ngModel)]="desk" />
+    <select [(ngModel)]="desk" name="desk">
+        <option *ngFor="let d of desks" [ngValue]="d">{{d}}</option>
+    </select>
     <br />
     <button type="submit">Add</button>
 </form>

@@ -13,6 +13,9 @@ export class NewTraderComponent implements OnInit {
   name: string = "";
   location: string = "";
   desk: string = "";
+  desks: string[] = [
+    'Equities', 'Cash', 'FX'
+  ]
 
   constructor(private traderService: TraderService) { }
 
