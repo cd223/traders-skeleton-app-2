@@ -1,6 +1,12 @@
 <div class="container">
-  <p>Number of trades completed: {{numberOfTradesCompleted}}</p>
 
-  <app-trader></app-trader>
-  <app-equity-trade-capture (newTradeCompleted)="onNewTradeCompleted($event)"></app-equity-trade-capture>
+  <nav>
+    <a [routerLink]="['/trader']">Trader</a>
+    <a [routerLink]="['/trade']">Trade</a>
+  </nav>
+
+  <p>Current date: {{newDateDetected}}</p>
+  <app-about (newDateDetected)="onNewDateDetected($event)"></app-about>
+
+  <router-outlet></router-outlet>
 </div>

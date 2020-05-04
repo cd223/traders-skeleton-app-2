@@ -7,12 +7,12 @@ import { Component, OnInit, OnChanges, AfterViewInit, AfterViewChecked, AfterCon
 })
 export class AppComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterViewInit, AfterViewChecked, AfterContentInit, AfterContentChecked  {
   title = 'traders';
-  numberOfTradesCompleted: number = 0
+  newDateDetected: Date
 
   constructor() {}
 
-  onNewTradeCompleted(numberOfTrades: number) {
-    this.numberOfTradesCompleted = numberOfTrades;
+  onNewDateDetected(newDate: Date) {
+    this.newDateDetected = newDate;
   }
 
   ngAfterContentChecked(): void {

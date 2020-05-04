@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  @Output() newDateDetected = new EventEmitter<Date>()
+
   constructor() { }
 
   ngOnInit(): void {
+    this.newDateDetected.emit(new Date())
   }
 
 }

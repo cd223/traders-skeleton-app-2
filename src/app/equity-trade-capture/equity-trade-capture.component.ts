@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EquityTradeService } from '../equity-trade.service';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TraderService } from '../trader.service';
@@ -16,7 +16,6 @@ export class EquityTradeCaptureComponent implements OnInit {
   trades: EquityTrade[]
   currencies: string[]
   errors: boolean = false;
-  @Output() newTradeCompleted = new EventEmitter<number>()
 
   tradeIdFc = new FormControl(this.equityTradeService.getFreshId(), [Validators.required])
   symbolFc = new FormControl('',  [Validators.required, Validators.minLength(2), Validators.maxLength(4)])
@@ -55,7 +54,6 @@ export class EquityTradeCaptureComponent implements OnInit {
       trade.currency = this.currencyFc.value
       trade.selectedTrader = this.selectedTraderFc.value
       this.equityTradeService.addTrade(trade)
-      this.newTradeCompleted.emit(this.trades.length)
       this.tradeIdFc.setValue(this.equityTradeService.getFreshId())
       this.errors = false;
     } else {

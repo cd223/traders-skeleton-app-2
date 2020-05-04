@@ -1,0 +1,12 @@
+<h2>Trades</h2>
+<ul>
+  <tr *ngFor='let trade of trades'>
+    <td>{{ trade.tradeId }}&nbsp;</td>
+    <td>{{ trade.symbol }}&nbsp;</td>
+    <td>{{ trade.quantity }}&nbsp;</td>
+    <td>{{ trade.price | customCurrency: trade.currency }}&nbsp;</td>
+    <td>{{ trade.selectedTrader.name }}&nbsp;</td>
+  </tr>
+</ul>
+
+<app-equity-trade-detail-view></app-equity-trade-detail-view>

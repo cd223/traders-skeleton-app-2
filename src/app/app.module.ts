@@ -14,6 +14,8 @@ import { FibonacciComponent } from './fibonacci/fibonacci.component';
 import { TimerIntervalComponent } from './timer-interval/timer-interval.component';
 import { PersonComponent } from './person/person.component';
 import { InputBoxDirective } from './input-box.directive';
+import { EquityTradeViewComponent } from './equity-trade-view/equity-trade-view.component';
+import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equity-trade-detail-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { InputBoxDirective } from './input-box.directive';
     PersonComponent,
     FibonacciComponent,
     TimerIntervalComponent,
-    InputBoxDirective
+    InputBoxDirective,
+    EquityTradeViewComponent,
+    EquityTradeDetailViewComponent
   ],
   imports: [
     BrowserModule,
