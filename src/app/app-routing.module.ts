@@ -7,12 +7,16 @@ import { TraderViewComponent } from './trader-view/trader-view.component';
 import { NewTraderComponent } from './new-trader/new-trader.component';
 import { EquityTradeComponent } from './equity-trade/equity-trade.component';
 import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equity-trade-detail-view.component';
+import { TradersByDeskComponent } from './traders-by-desk/traders-by-desk.component';
 
 const routes: Routes = [
   { path: '' , redirectTo: 'trader', pathMatch: 'full'},
   { path: 'trader' , component: TraderComponent, children: [
     {path: '', redirectTo: 'view', pathMatch: 'full'},
-    {path: 'view', component: TraderViewComponent },
+    {path: 'view', component: TraderViewComponent, children: [
+      {path: '', redirectTo: 'desk/Equities', pathMatch: 'full'},
+      {path: 'desk/:desk', component: TradersByDeskComponent }
+    ]},
     {path: 'new', component: NewTraderComponent }
   ]},
   { path: 'trade' , component: EquityTradeComponent, children: [

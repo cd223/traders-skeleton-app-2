@@ -7,3 +7,10 @@
       <td>{{ trader.desk }}&nbsp;</td>
     </tr>
   </ul>
+
+<h3>Traders By Desk</h3>
+<select [ngModel]="desk" (change)="onDeskChange($event)">
+    <option *ngFor="let d of desks" [value]="d">{{d}}</option>
+</select>
+
+<router-outlet></router-outlet>

@@ -18,6 +18,7 @@ import { EquityTradeViewComponent } from './equity-trade-view/equity-trade-view.
 import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equity-trade-detail-view.component';
 import { TraderViewComponent } from './trader-view/trader-view.component';
 import { EquityTradeComponent } from './equity-trade/equity-trade.component';
+import { TradersByDeskComponent } from './traders-by-desk/traders-by-desk.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EquityTradeComponent } from './equity-trade/equity-trade.component';
     EquityTradeViewComponent,
     EquityTradeDetailViewComponent,
     TraderViewComponent,
-    EquityTradeComponent
+    EquityTradeComponent,
+    TradersByDeskComponent
   ],
   imports: [
     BrowserModule,
