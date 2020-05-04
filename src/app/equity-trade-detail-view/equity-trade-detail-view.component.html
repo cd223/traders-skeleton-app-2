@@ -1,1 +1,10 @@
-<p>Hello</p>
+<h3>Trade Details</h3>
+<ul>
+  <tr>
+    <td>{{ trade.tradeId }}&nbsp;</td>
+    <td>{{ trade.symbol }}&nbsp;</td>
+    <td>{{ trade.quantity }}&nbsp;</td>
+    <td>{{ trade.price | customCurrency: trade.currency }}&nbsp;</td>
+    <td>{{ trade.selectedTrader.name }}&nbsp;</td>
+  </tr>
+</ul>

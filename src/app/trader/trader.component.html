@@ -1,14 +1,7 @@
-<h2>Traders</h2>
-  <ul>
-    <tr *ngFor='let trader of traders'>
-      <td>{{ trader.id }}&nbsp;</td>
-      <td>{{ trader.name }}&nbsp;</td>
-      <td>{{ trader.location }}&nbsp;</td>
-      <td>{{ trader.desk }}&nbsp;</td>
-    </tr>
-  </ul>
-
-  <app-new-trader></app-new-trader>
-
-  <app-about>Trader Component</app-about>
-  <hr />
+  <nav>
+    <a [routerLink]="['view']">View</a>
+    <a [routerLink]="['new']">New</a>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-about>Trader Component Passing Content to About Component</app-about>
+  <hr/>

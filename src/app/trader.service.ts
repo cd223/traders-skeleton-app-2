@@ -10,6 +10,7 @@ export class TraderService {
   idCount: number = 5
 
   private traders: Trader[] = [
+    {id: 0, name: 'John Doe', location: 'London', desk: 'Equities' },
     {id: 1, name: 'Mark Walsh', location: 'New York', desk: 'Equities'},
     {id: 2, name: 'Mike Clarke', location: 'London', desk: 'Cash'},
     {id: 3, name: 'Ewan Smith', location: 'Hong Kong', desk: 'FX'},

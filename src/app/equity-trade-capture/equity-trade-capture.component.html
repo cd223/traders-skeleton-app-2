@@ -1,7 +1,4 @@
-<app-equity-trade-view></app-equity-trade-view>
-
 <h2>Add a Trade</h2>
-
 <form [formGroup]="eqTradeFg" (ngSubmit)="addTrade()">
     
     <label>Trade ID</label>
@@ -29,5 +26,3 @@
     <button type="submit">Submit Trade</button>
 </form>
 <label *ngIf="errors" [ngStyle]="{color: 'red' }">Errors! Submit unsuccessful.</label>
-
-<app-about>Equity Trade Component</app-about>

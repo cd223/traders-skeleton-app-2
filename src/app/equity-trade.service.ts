@@ -8,9 +8,17 @@ export class EquityTradeService {
 
   idCount: number = 1
   
-  private trades: EquityTrade[] = [];
+  private trades: EquityTrade[] = [
+    { tradeId: 0,
+      symbol: 'AAPL',
+      quantity: 100,
+      price: 140,
+      currency: 'GBP',
+      selectedTrader: { id: 0, name: 'John Doe', location: 'London', desk: 'Equities' } }
+  ];
   private supportedCurrencies: string[] = ['USD', 'EUR', 'CRC', 'GBP', 'JPY', 'BTC'] 
 
+  
   constructor() { }
 
   getTrades(): EquityTrade[] {

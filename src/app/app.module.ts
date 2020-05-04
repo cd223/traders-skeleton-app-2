@@ -16,6 +16,8 @@ import { PersonComponent } from './person/person.component';
 import { InputBoxDirective } from './input-box.directive';
 import { EquityTradeViewComponent } from './equity-trade-view/equity-trade-view.component';
 import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equity-trade-detail-view.component';
+import { TraderViewComponent } from './trader-view/trader-view.component';
+import { EquityTradeComponent } from './equity-trade/equity-trade.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equit
     TimerIntervalComponent,
     InputBoxDirective,
     EquityTradeViewComponent,
-    EquityTradeDetailViewComponent
+    EquityTradeDetailViewComponent,
+    TraderViewComponent,
+    EquityTradeComponent
   ],
   imports: [
     BrowserModule,
