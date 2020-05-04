@@ -1,4 +1,6 @@
 <div class="container">
+  <p>Number of trades completed: {{numberOfTradesCompleted}}</p>
+
   <app-trader></app-trader>
-  <app-equity-trade-capture></app-equity-trade-capture>
+  <app-equity-trade-capture (newTradeCompleted)="onNewTradeCompleted($event)"></app-equity-trade-capture>
 </div>

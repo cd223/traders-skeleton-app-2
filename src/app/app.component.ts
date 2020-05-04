@@ -1,10 +1,5 @@
 import { Component, OnInit, OnChanges, AfterViewInit, AfterViewChecked, AfterContentInit, AfterContentChecked, OnDestroy, DoCheck, SimpleChanges } from '@angular/core';
 
-import { Trader } from "./trader";
-import { TraderService } from "./trader.service";
-import { EquityTrade } from './equity-trade';
-import { EquityTradeService } from './equity-trade.service';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,8 +7,13 @@ import { EquityTradeService } from './equity-trade.service';
 })
 export class AppComponent implements OnInit, OnDestroy, OnChanges, DoCheck, AfterViewInit, AfterViewChecked, AfterContentInit, AfterContentChecked  {
   title = 'traders';
+  numberOfTradesCompleted: number = 0
 
   constructor() {}
+
+  onNewTradeCompleted(numberOfTrades: number) {
+    this.numberOfTradesCompleted = numberOfTrades;
+  }
 
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked called')
