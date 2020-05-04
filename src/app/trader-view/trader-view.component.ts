@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 export class TraderViewComponent implements OnInit {
 
   traders: Trader[]
-  desk: string = "";
   desks: string[] = [
     "Equities", "Cash", "FX"
   ]
+  desk: string = this.desks[0];
 
   constructor(private traderService: TraderService, private router: Router) { }
 
