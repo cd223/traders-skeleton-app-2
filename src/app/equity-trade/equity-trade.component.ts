@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ZoneWatcherService } from '../zone-watcher.service';
 
 @Component({
   selector: 'app-equity-trade',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquityTradeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private zoneWatcherService: ZoneWatcherService) { }
 
   ngOnInit(): void {
   }

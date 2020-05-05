@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { EquityTrade } from './equity-trade';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class EquityTradeService {
 
   idCount: number = 1

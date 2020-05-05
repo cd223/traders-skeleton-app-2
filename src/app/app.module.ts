@@ -19,6 +19,8 @@ import { EquityTradeDetailViewComponent } from './equity-trade-detail-view/equit
 import { TraderViewComponent } from './trader-view/trader-view.component';
 import { EquityTradeComponent } from './equity-trade/equity-trade.component';
 import { TradersByDeskComponent } from './traders-by-desk/traders-by-desk.component';
+import { ZoneWatcherService } from './zone-watcher.service';
+import { EquityTradeService } from './equity-trade.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,7 @@ import { TradersByDeskComponent } from './traders-by-desk/traders-by-desk.compon
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule  ],
-  providers: [TraderService],
+  providers: [TraderService, EquityTradeService, ZoneWatcherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

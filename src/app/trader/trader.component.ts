@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Trader } from '../trader';
 import { TraderService } from '../trader.service';
+import { ZoneWatcherService } from '../zone-watcher.service';
 
 @Component({
   selector: 'app-trader',
@@ -9,12 +10,10 @@ import { TraderService } from '../trader.service';
 })
 export class TraderComponent implements OnInit {
 
-  traders: Trader[];
-
-  constructor(private traderService: TraderService) { }
+  constructor(private traderService: TraderService,
+    private zoneWatcherService: ZoneWatcherService) { }
 
   ngOnInit(): void {
-    this.traders = this.traderService.getTraders();
   }
 
 }
